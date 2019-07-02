@@ -1,8 +1,11 @@
 <template>
-  <div id="app">
-    <MailMe 
-      :mailMeStyle="{ 
+  <div id="app" class="app">
+    <telegramme 
+      :mailMeStyle='{ 
         wrapper: {
+
+        },
+        name: {
 
         },
         subject: {
@@ -14,31 +17,34 @@
         send: {
 
         }
-      }"
-      :SMTPSettings="{
-        params: {
-          'Host': 'smtp.yourisp.com',
-          'Username': 'username',
-          'Password': 'password',
-          'To': 'trashermailbox@yandex.ru'
-        }
-      }"
-      title="MailMe!"
+      }'
+      BotApi='786698677:AAH0nMPQtXQDF_ZEw2w5tA68kno91JQJ_TI'
+      chatID="-1001303367026"
+      title='Telegram me!'
       sendButton='Send me!'
-      sendFromPlaceholder="Enter your email..."
+      repeatButton="Send again"
+      sendFromPlaceholder='Enter your name...'
       subjectPlaceholder='Enter your subject...'
       messagePlaceholder='Create a message...'
+      successNotification="Great! I will see your message ;-)"
     />
   </div>
 </template>
 
 <script>
-import MailMe from './components/MailMe.vue'
+import telegramme from './components/telegramme.vue'
 
 export default {
   name: 'app',
   components: {
-    MailMe
+    telegramme
   }
 }
 </script>
+<style scoped>
+  .app {
+    display: flex;
+    justify-content: center;
+    padding: 10%;
+  }
+</style>
