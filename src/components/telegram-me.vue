@@ -68,7 +68,6 @@
 
   export default {
     name: 'telegram-me',
-    inject: ['$validator'],
     props: {
       title: String,
       BotApi: String,
