@@ -67,7 +67,7 @@
   import axios from 'axios';
 
   export default {
-    name: 'telegramme',
+    name: 'telegram-me',
     inject: ['$validator'],
     props: {
       title: String,

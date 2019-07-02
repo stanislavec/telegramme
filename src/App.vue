@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import telegramme from './components/telegramme.vue'
+import telegramme from './components/telegram-me.vue'
 
 export default {
   name: 'app',
