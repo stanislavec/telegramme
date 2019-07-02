@@ -1,29 +1,39 @@
-# mailme
+# Telegramme - simple form to send message to chat
+***
+
+![Now people can send you a message from your website](https://pouch.jumpshare.com/preview/97qNtR8-NKuA9pOMbyAr9OpQdGIUqRTaPn9ecGeqbuRaRGmUVMsaga4l0Z_ayJr4K8se-eWGrrr2DtvvrEMR6RA1jQB_zmxltR5bgJ1-nls)
+
+[Demo](https://stanislavec.github.io/telegramme/)
 
 ## Project setup
 ```
 npm install
-```
-
-### Compiles and hot-reloads for development
-```
 npm run serve
-```
-
-### Compiles and minifies for production
-```
 npm run build
-```
-
-### Run your tests
-```
 npm run test
-```
-
-### Lints and fixes files
-```
 npm run lint
 ```
+## Project setup
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Install with npm: 
+`npm i telegramme`
+
+## Settings
+
+- [X] Need to set up props for launch:
+
+```
+props: {
+  title: String,
+  BotApi: String,
+  chatID: String,
+  sendButton: String,
+  repeatButton: String,
+  sendFromPlaceholder: String,
+  subjectPlaceholder: String,
+  messagePlaceholder: String,
+  successNotification: String
+}
+```
+
+- [X] Need to create a chat-bot: https://tlgrm.ru/docs/bots/api#authorizing-your-bot
