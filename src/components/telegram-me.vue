@@ -22,7 +22,6 @@
           class="send-to"
           name="name"
           v-model="name"
-          v-validate="'required'" 
           :placeholder="sendFromPlaceholder"
         >
       </div>
@@ -30,7 +29,6 @@
         <input 
           type="text" 
           name="subject"
-          v-model="subject"
           class="subject"
           :placeholder="subjectPlaceholder"
         >
@@ -39,7 +37,6 @@
         <textarea 
           name="message"
           v-model="message"
-          v-validate="'required'" 
           :placeholder="messagePlaceholder"
           cols="40" 
           rows="4"
