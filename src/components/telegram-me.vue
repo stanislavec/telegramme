@@ -87,7 +87,7 @@
 
     methods: {
       validateForm () {
-        return !this.errors.has('message') && this.message && this.name && !this.errors.has('name')
+        return this.message && this.name
       },
 
       clearVModel () {
