@@ -1,7 +1,6 @@
 <template>
   <div id="app" class="app">
-    <telegramme 
-      :mailMeStyle='{}'
+    <telegramme
       BotApi='786698677:AAH0nMPQtXQDF_ZEw2w5tA68kno91JQJ_TI'
       chatID="-1001303367026"
       title='Telegram me!'
