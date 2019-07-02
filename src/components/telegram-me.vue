@@ -1,7 +1,6 @@
 <template>
   <div 
     class="telegram-me-wrapper"
-    v-bind:style="[mailMeStyle.wrapper]"
   >
     <div v-if="statusText" 
       class="notification"
@@ -10,7 +9,6 @@
       <p>{{ statusText }}</p>
       <button 
         class="send-me"
-        v-bind:style="[mailMeStyle.send]"
         @click="clearVModel()"
       > 
         {{ repeatButton }} 
@@ -26,7 +24,6 @@
           v-model="name"
           v-validate="'required'" 
           :placeholder="sendFromPlaceholder"
-          v-bind:style="[mailMeStyle.name]"
         >
       </div>
       <div class="telegram-me-field">
@@ -36,7 +33,6 @@
           v-model="subject"
           class="subject"
           :placeholder="subjectPlaceholder"
-          v-bind:style="[mailMeStyle.subject]"
         >
       </div>
       <div class="telegram-me-field">
@@ -47,13 +43,11 @@
           :placeholder="messagePlaceholder"
           cols="40" 
           rows="4"
-          v-bind:style="[mailMeStyle.text]"
         >
         </textarea>
       </div>
       <button 
         class="send-me"
-        v-bind:style="[mailMeStyle.send]"
         :disabled="!validateForm()"
         @click="sendEmail()"
       > 
@@ -72,7 +66,6 @@
       title: String,
       BotApi: String,
       chatID: String,
-      mailMeStyle: Object,
       sendButton: String,
       repeatButton: String,
       sendFromPlaceholder: String,
