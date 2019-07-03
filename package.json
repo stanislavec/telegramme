@@ -8,7 +8,7 @@
       "url": "https://github.com/stanislavec/telegramme/blob/master/LICENSE"
     }
   ],
-  "license": "SEE LICENSE IN LICENSE.md",
+  "license": "LGPL-3.0",
   "repository": {
     "type": "git",
     "url": "git@github.com:stanislavec/telegramme.git"
