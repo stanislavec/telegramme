@@ -14,6 +14,11 @@
         {{ repeatButton }} 
       </button>
     </div>
+    <div v-else-if="preloader" class="transition-loader">
+      <div class="transition-loader-inner">
+        <div v-for="n in 6" :key="n"></div>
+      </div>
+    </div>
     <div v-else class="form">
       <h2> {{ title }}</h2>
       <div class="telegram-me-field">
@@ -78,7 +83,8 @@
         message: '' ,
         success: false,
         error: false,
-        statusText: ''
+        statusText: '',
+        preloader: false
       }
     },
 
@@ -97,6 +103,7 @@
       },
 
       sendEmail () {
+        this.preloader = true
         axios
           .get(`https://api.telegram.org/bot${this.BotApi}/sendMessage`, {
             params: {
@@ -114,6 +121,9 @@
             this.error = true
             this.statusText = error.message
             console.log(error.message)
+          })
+          .finally(() => {
+            this.preloader = false
           })
       }
     }
@@ -138,7 +148,8 @@
     display: flex;
   }
 
-  .telegram-me-wrapper div {
+  .notification,
+  .form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -203,4 +214,88 @@
     color: white;
     text-transform: uppercase;
   }
+
+  .transition-loader {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .transition-loader-inner {
+    overflow: hidden;
+    align-items: center;
+    display: flex;
+  }
+
+  .transition-loader-inner div {
+    padding: 3px;
+    margin: 10px;
+    background: #42b983;
+    display: inline-block;
+  }
+
+  .transition-loader-inner div:nth-child(1) {
+    -webkit-animation: loader 3s 600ms infinite ease-in-out;
+    animation: loader 3s 600ms infinite ease-in-out;
+  } 
+  .transition-loader-inner div:nth-child(2) {
+    -webkit-animation: loader 3s 500ms infinite ease-in-out;
+    animation: loader 3s 500ms infinite ease-in-out;
+  } 
+  .transition-loader-inner div:nth-child(3) {
+    -webkit-animation: loader 3s 400ms infinite ease-in-out;
+    animation: loader 3s 400ms infinite ease-in-out;
+  } 
+  .transition-loader-inner div:nth-child(4) {
+    -webkit-animation: loader 3s 300ms infinite ease-in-out;
+    animation: loader 3s 300ms infinite ease-in-out;
+  } 
+  .transition-loader-inner div:nth-child(5) {
+    -webkit-animation: loader 3s 200ms infinite ease-in-out;
+    animation: loader 3s 200ms infinite ease-in-out;
+  } 
+  .transition-loader-inner div:nth-child(6) {
+    -webkit-animation: loader 3s 100ms infinite ease-in-out;
+    animation: loader 3s 100ms infinite ease-in-out;
+  }  
+
+
+  @keyframes loader {
+    0% {
+      opacity: 0;
+      transform: translateX(-300px) scale(1);
+    }
+    33% {
+      opacity: 1;
+      transform: translateX(0px) scale(2);
+    }
+    66% {
+      opacity: 1;
+      transform: translateX(0px) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(300px) scale(2);
+    }
+  }
+
+  @-webkit-keyframes loader {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateX(-300px);
+    }
+    33% {
+      opacity: 1;
+      -webkit-transform: translateX(0px);
+    }
+    66% {
+      opacity: 1;
+      -webkit-transform: translateX(0px);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translateX(300px);
+    }
+  }
+
 </style>
