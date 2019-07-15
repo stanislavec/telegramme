@@ -108,7 +108,7 @@
           .get(`https://api.telegram.org/bot${this.BotApi}/sendMessage`, {
             params: {
               chat_id: this.chatID,
-              text: `Subject: ${this.subject}. Sended by ${this.name}. ${this.message}`
+              text: this.subject ? `Author: ${this.name}\n  \nSubject: ${this.subject}\n${this.message}` : `Author: ${this.name}\n  \n${this.message}`
             }
           })
           .then((response) => {
