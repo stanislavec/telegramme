@@ -132,7 +132,7 @@
 
 <style scoped>
   h2 {
-    margin: 10px 5px;
+    margin: 0 0 20px 0;
     font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
     font-weight: 300;
     color: #273849;
@@ -144,8 +144,9 @@
     width: 350px;
     min-height: 280px;
     padding: 20px;
-    box-shadow: 0 0 2px rgba(0,0,0,0.3);
+    box-shadow: 0 0 2px rgba(0,0,0,1);
     display: flex;
+    border-radius: 10px;
   }
 
   .notification,
@@ -189,10 +190,12 @@
     margin-top: 30px;
     font-weight: 400;
     min-width: 50px;
-    background-color: #42b983;
+    background-color: #179cde;
+    border-radius: 2px;
     color: white;
     text-align: center;
     outline: none;
+    border: unset;
   }
 
   .send-me:disabled {
@@ -230,7 +233,7 @@
   .transition-loader-inner div {
     padding: 3px;
     margin: 10px;
-    background: #42b983;
+    background: #179cde;
     display: inline-block;
   }
 
