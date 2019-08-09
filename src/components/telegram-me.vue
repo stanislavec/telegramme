@@ -169,7 +169,7 @@
     width: 100%;
     max-width: 100%;
     outline: none;
-    padding: 5px 10px;
+    padding: 10px;
     cursor: text;
     border: 1px solid lightgrey;
   }
