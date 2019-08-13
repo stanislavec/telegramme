@@ -165,6 +165,7 @@
 
   input, 
   textarea {
+    font-size: 14px;
     box-sizing: border-box;
     width: 100%;
     max-width: 100%;
@@ -181,21 +182,34 @@
   input::placeholder,
   textarea::placeholder {
     color: lightgrey;
-    font-size: 11px;
+    font-size: 14px;
   }
 
   .send-me {
+    display: inline-block;
+    vertical-align: top;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
     cursor: pointer;
-    padding: 10px 15px;
-    margin-top: 30px;
-    font-weight: 400;
-    min-width: 50px;
-    background-color: #179cde;
-    border-radius: 2px;
-    color: white;
+    background-image: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     text-align: center;
     outline: none;
     border: unset;
+    color: #fff;
+    border-color: #357ebd;
+    padding: 10px 14px;
+    min-width: 225px;
+    font-size: 15px;
+    line-height: 2;
+    border-radius: 30px;
+    background-color: #1d98dc;
+    margin-top: 30px;
   }
 
   .send-me:disabled {
@@ -233,7 +247,7 @@
   .transition-loader-inner div {
     padding: 3px;
     margin: 10px;
-    background: #179cde;
+    background: #1d98dc;
     display: inline-block;
   }
 

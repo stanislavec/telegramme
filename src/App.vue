@@ -4,7 +4,7 @@
       BotApi='786698677:AAH0nMPQtXQDF_ZEw2w5tA68kno91JQJ_TI'
       chatID="-1001303367026"
       title='Telegram me!'
-      sendButton='Send me!'
+      sendButton='Send'
       repeatButton="Send again"
       sendFromPlaceholder='Enter your name...'
       subjectPlaceholder='Enter your subject...'
