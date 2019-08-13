@@ -1,7 +1,7 @@
 # Telegramme - simple Vue.js form to send telegram message from vue-application
 ***
 
-![Now people can send you a message from your website](https://cdn1.savepice.ru/uploads/2019/8/9/b598e39589d8fe61f1a94f037a65d6c4-full.jpg)
+![Now people can send you a message from your website](https://cdn1.savepice.ru/uploads/2019/8/13/2413829e9a8f2d8e0be1c7e658e2aae9-full.png)
 
 You can send message to me by [Demo](https://stanislavec.github.io/telegramme/)
 
