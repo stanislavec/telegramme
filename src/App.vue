@@ -8,7 +8,7 @@
       repeatButton="Send again"
       sendFromPlaceholder='Enter your name...'
       subjectPlaceholder='Enter your subject...'
-      messagePlaceholder='Create a message...'
+      messagePlaceholder='Create your message...'
       successNotification="Great! I will see your message ;-)"
     />
   </div>
