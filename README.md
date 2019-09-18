@@ -1,7 +1,7 @@
 # Telegramme - simple Vue.js form to send telegram message from vue-application
 ***
 
-![Now people can send you a message from your website](https://cdn1.savepice.ru/uploads/2019/8/13/2413829e9a8f2d8e0be1c7e658e2aae9-full.png)
+![Now people can send you a message from your website](https://i.postimg.cc/NF6QJdbk/2019-09-18-10-32-44.png)
 
 You can send message to me by [Demo](https://stanislavec.github.io/telegramme/)
 
@@ -10,33 +10,41 @@ Also you can use telegramme to get messages from your site to your telegram-chat
 Based on Telegram Api: see method [here](https://core.telegram.org/bots/api#sendmessage)
 
 ## Project setup
+
+- [X] Install with npm: 
 ```
-npm install
-npm run serve
-npm run build
-npm run test
-npm run lint
+npm i telegramme
 ```
-## Project setup
 
-Install with npm: 
-`npm i telegramme`
-
-## Settings
-
-- [X] Need to set up props for launch:
-
+- [X] Import component in your project: 
 ```
-props: {
-  title: String,
-  BotApi: String, // Your Bot ID
-  chatID: String, // Your Chat ID
-  sendButton: String,
-  repeatButton: String,
-  sendFromPlaceholder: String,
-  subjectPlaceholder: String,
-  messagePlaceholder: String,
-  successNotification: String
+import TelegramMe from 'telegramme/src/components/telegram-me'
+```
+
+- [X] Init component in your project: 
+```
+export default {
+  name: 'your-app',
+  components: {
+    TelegramMe
+  }
 }
 ```
+
+- [X] Set TelegramMe component: 
+```
+<TelegramMe
+  BotApi=String // Your Bot ID
+  chatID=String // Your Chat ID
+  title=String
+  sendButton=String
+  repeatButton=String
+  sendFromPlaceholder=String
+  subjectPlaceholder=String
+  messagePlaceholder=String
+  successNotification=String
+/>
+```
+
+## Settings
 - [X] Need to create a chat-bot: https://tlgrm.ru/docs/bots/api#authorizing-your-bot
