@@ -20,7 +20,10 @@
       </div>
     </div>
     <div v-else class="form">
-      <h2> {{ title }}</h2>
+      <div class="t-me__header">
+        <div class="logo"></div>
+        <h2> {{ title }}</h2>
+      </div>
       <div class="telegram-me-field">
         <input 
           type="text" 
@@ -132,7 +135,7 @@
 
 <style scoped>
   h2 {
-    margin: 0 0 20px 0;
+    margin: 0;
     font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
     font-weight: 300;
     color: #273849;
@@ -158,6 +161,26 @@
     width: 100%;
   }
 
+  .t-me__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    min-height: 60px;
+    margin-bottom: 20px;
+  }
+
+  .logo {
+    flex-basis: 20%;
+    height: 50px;
+    background-image: url('./../assets/t_logo.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
   .telegram-me-field {
     width: 100%;
     padding: 5px 0;
@@ -177,6 +200,7 @@
 
   textarea {
     min-width: 100%;
+    min-height: 200px;
   }
 
   input::placeholder,
