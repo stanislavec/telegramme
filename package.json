@@ -1,6 +1,6 @@
 {
   "name": "telegramme",
-  "version": "0.2.4",
+  "version": "0.2.6",
   "private": false,
   "unpkg": "dist/telegram-me.min.js",
   "browser": {
