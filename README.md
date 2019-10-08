@@ -18,7 +18,7 @@ npm i telegramme
 
 - [X] Import component in your project: 
 ```
-import TelegramMe from 'telegramme/src/components/telegram-me'
+import TelegramMe from 'telegramme'
 ```
 
 - [X] Init component in your project: 
