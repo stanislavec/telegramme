@@ -1,7 +1,12 @@
 {
   "name": "telegramme",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "private": false,
+  "unpkg": "dist/telegram-me.min.js",
+  "browser": {
+    "./sfc": "src/components/telegram-me.vue"
+  },
+  "main": "src/components/telegram-me.vue",
   "licenses": [
     {
       "type": "LGPL-3.0",
