@@ -1,6 +1,6 @@
 {
   "name": "telegramme",
-  "version": "0.2.9",
+  "version": "0.3.0",
   "private": false,
   "unpkg": "dist/telegram-me.min.js",
   "browser": {
@@ -31,18 +31,20 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "create-npm": "npx vue-cli-service build --target wc --name telegram-me ./src/components/telegram-me.vue"
+    "create-npm": "npx vue-cli-service build --target wc --name telegram-me ./src/components/telegram-me.vue",
+    "prettier": "prettier --config ./prettier.config.js --write \"./src/**/*.{js,vue}\""
   },
   "dependencies": {
     "axios": "^0.19.0",
     "core-js": "^2.6.10",
+    "prettier": "^2.0.2",
     "vue": "^2.6.10"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.12.1",
     "@vue/cli-plugin-eslint": "^3.12.1",
-    "@vue/cli-service": "^4.1.2",
-    "babel-eslint": "^10.0.3",
+    "@vue/cli-service": "^4.2.3",
+    "babel-eslint": "^10.1.0",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "vue-template-compiler": "^2.6.11"
