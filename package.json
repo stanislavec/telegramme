@@ -35,7 +35,7 @@
     "prettier": "prettier --config ./prettier.config.js --write \"./src/**/*.{js,vue}\""
   },
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "core-js": "^2.6.10",
     "prettier": "^2.0.2",
     "vue": "^2.6.10"
