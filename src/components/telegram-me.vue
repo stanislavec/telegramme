@@ -1,6 +1,6 @@
 <template>
   <div class="telegram-me-wrapper">
-    <div v-if="statusText" class="notification" :class="{ success: success, error: error }">
+    <div v-if="statusText" class="notification" :class="{ success, error }">
       <p>{{ statusText }}</p>
       <button class="send-me" @click="clearVModel()">
         {{ repeatButton }}
